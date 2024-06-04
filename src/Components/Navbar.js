@@ -63,7 +63,7 @@ function Navbar() {
               <Link to="/create" className='block text-lg py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0'>Create</Link>
             </li>
             <li>
-              <Link to="#" className='block  text-lg py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0'>Sign in</Link>
+              <Link to="/signin" className='block  text-lg py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0'>Sign in</Link>
             </li>
             <li>
               <Link to="#" className='block text-lg py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0'>Contact us</Link>

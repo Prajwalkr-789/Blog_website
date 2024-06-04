@@ -39,8 +39,7 @@ function Inputform() {
         author
       };
       try {
-        const response = await axios.post('http://localhost:8000/blog/create', data);
-        console.log(response.data);
+        const response = await axios.post('https://blog-web-api.vercel.app/blog/create', data);
         if(response.status == 201){
             navigate('/display')
         }
@@ -51,8 +50,10 @@ function Inputform() {
   };
 
   return (
-    <div className='mt-20'>
-      <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
+    <div className='mt-20 p-6 '>
+      <p className='text-xl text-green-500 text-center font-bold mb-5'>Blog Entry</p>
+      <h2 className='text-lg text-center font-bold mb-5'>Enter all the information about the blog</h2>
+      <form className="max-w-md mx-auto  backdrop-blur-lg bg-opacity-80 p-4 rounded-lg" onSubmit={handleSubmit}>
         <div className="relative z-0 w-full mb-5 group">
           <input type="text" name="author" id="author" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required onChange={(e) => setAuthor(e.target.value)} />
           <label htmlFor="author" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Author</label>
