@@ -11,7 +11,7 @@ function Display_data(props) {
   useEffect(() => {
     checkmobile()
     if (location.state) {
-      setData(location.state); 
+      setData(location.state.data); 
     }
   }, [location.state]); 
 
@@ -27,10 +27,12 @@ function Display_data(props) {
     checkmobile()
   })
 
-  console.log(data); 
+
 
   return (
+   
     <div className='flex justify-center '>
+       
       <div className={`${isMobile?'w-full mt-20':'w-8/12'}  mt-14`}>
       <h1 className='text-3xl mt-2 font-bold text-violet-500 text-center'>{data?.title}</h1>
         <div className='bg-white  backdrop-blur-xl bg-opacity-95 bg p-4'>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 import imga from '../utils/Untitled_design-removebg-preview.png'
+import Footer from './Footer';
 
 const knowledgeSynonyms = ['Understanding', 'Comprehension', 'Wisdom', 'Cognition','Intelligence', 'Learning', 'Education', 'Expertise', 'Information', 'Proficiency'];
 
@@ -32,6 +33,7 @@ function Home() {
   
 
   return (
+    <>
     <div className='flex w-full justify-center items-center  h-screen'>
       <div className='flex w-full mt-20 flex-col md:flex-row justify-between items-center'>
         {/* Left Side Content */}
@@ -53,7 +55,10 @@ function Home() {
           <img className={`${isMobile?'w-full':'w-8/12'} `} src={imga} alt="Blog platform illustration" />
         </div>
       </div>
+      
     </div>
+    <Footer/>
+    </>
   )
 }
 
